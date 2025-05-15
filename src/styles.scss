@@ -1,1 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+  /* ==========================================================================
+     Base Color Tokens
+     Raw color values that serve as the foundation for our color system
+     ========================================================================== */
+  --color-blue-500:    #3b82f6;
+  --color-gray-500:    #6b7280;
+  --color-green-500:   #22c55e;
+  --color-yellow-500:  #eab308;
+  --color-red-500:     #ef4444;
+  --color-sky-500:     #0ea5e9;
+  --color-white:       #ffffff;
+  --color-black:       #000000;
+
+  /* ==========================================================================
+     Semantic Color Tokens
+     Purpose-based color naming that maps to base colors
+     ========================================================================== */
+  --color-primary:     var(--color-blue-500);
+  --color-secondary:   var(--color-gray-500);
+  --color-success:     var(--color-green-500);
+  --color-warning:     var(--color-yellow-500);
+  --color-danger:      var(--color-red-500);
+  --color-infomation:  var(--color-sky-500);
+
+  /* ==========================================================================
+     Background Color Tokens
+     Background colors derived from semantic colors
+     ========================================================================== */
+  --color-background-primary:    var(--color-primary);
+  --color-background-secondary:  var(--color-secondary);
+  --color-background-success:    var(--color-success);
+  --color-background-warning:    var(--color-warning);
+  --color-background-danger:     var(--color-danger);
+  --color-background-infomation: var(--color-infomation);
+  --color-background-white:      var(--color-white);
+  --color-background-black:      var(--color-black);
+
+  /* ==========================================================================
+     Text Color Tokens
+     Text colors for different background contexts
+     ========================================================================== */
+  --color-text-primary:    var(--color-white);
+  --color-text-secondary:  var(--color-white);
+  --color-text-success:    var(--color-white);
+  --color-text-warning:    var(--color-black);
+  --color-text-danger:     var(--color-white);
+  --color-text-infomation: var(--color-white);
+  --color-text-white:      var(--color-white);
+  --color-text-black:      var(--color-black);
+}

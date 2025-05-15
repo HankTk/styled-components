@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { AxBoxComponent } from './components/ax-box/ax-box.component';
-import { COLORS } from './constants/colors';
+import { TOKENS } from './constants/colors';
 
 @Component({
   selector: 'app-root',
@@ -12,5 +12,5 @@ import { COLORS } from './constants/colors';
 })
 export class AppComponent {
   title = 'styled-components';
-  colors = COLORS;
+  tokens = TOKENS;
 }

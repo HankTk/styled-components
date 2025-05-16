@@ -154,16 +154,20 @@ TOKENS.color.background.INFOMATION // Information state color
 ```
 
 #### Spacing Tokens
-Consistent spacing values throughout the application:
+Consistent spacing values throughout the application using the Fibonacci sequence (1, 1, 2, 3, 5, 8, 13, 21) for harmonious proportions:
 ```typescript
-TOKENS.spacing.XS    // 4px
-TOKENS.spacing.SM    // 8px
-TOKENS.spacing.MD    // 16px
-TOKENS.spacing.LG    // 24px
-TOKENS.spacing.XL    // 32px
-TOKENS.spacing.XXL   // 48px
-TOKENS.spacing.XXXL  // 64px
+TOKENS.spacing.XS    // 1px - base unit
+TOKENS.spacing.SM    // 2px
+TOKENS.spacing.MD    // 3px
+TOKENS.spacing.LG    // 5px
+TOKENS.spacing.XL    // 8px
+TOKENS.spacing.XXL   // 13px
+TOKENS.spacing.XXXL  // 21px
 ```
+
+The spacing system is based on the Fibonacci sequence, where each number is the sum of the two preceding ones. This creates a natural, harmonious progression that feels organic and balanced. The values are taken directly from the Fibonacci sequence, starting with 1px as the base unit, creating a scale that maintains visual harmony while providing sufficient variety for different spacing needs.
+
+For more information about using the Fibonacci sequence in spacing, check out this article: [Saying Bye to 4px Spacing and Hello to Fibonacci](https://medium.com/@disco_lu/saying-bye-to-4px-spacing-and-hello-to-fibonacci-58477e3ecca3)
 
 #### Typography Tokens
 Comprehensive typography system including:

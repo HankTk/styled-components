@@ -22,13 +22,13 @@ export const TOKENS = {
     }
   },
   spacing: {
-    XS:    'var(--spacing-1)',   // 4px
-    SM:    'var(--spacing-2)',   // 8px
-    MD:    'var(--spacing-4)',   // 16px
-    LG:    'var(--spacing-6)',   // 24px
-    XL:    'var(--spacing-8)',   // 32px
-    XXL:   'var(--spacing-12)',  // 48px
-    XXXL:  'var(--spacing-16)',  // 64px
+    XS:    'var(--spacing-1)',   // 1px - base unit
+    SM:    'var(--spacing-2)',   // 2px
+    MD:    'var(--spacing-3)',   // 3px
+    LG:    'var(--spacing-4)',   // 5px
+    XL:    'var(--spacing-5)',   // 8px
+    XXL:   'var(--spacing-6)',   // 13px
+    XXXL:  'var(--spacing-8)',   // 21px
   },
   typography: {
     size: {

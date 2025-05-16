@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import { COLOR_TOKENS, SPACING_TOKENS, TYPOGRAPHY_TOKENS, RADIUS_TOKENS } from '../constants';
+import { WIDTHS, HEIGHTS } from '../constants/dimensions';
 
 export type VariantType = 'primary' | 'secondary' | 'success' | 'warning' | 'danger' | 'information';
+export type SizeType = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl' | 'full';
 
 type CSSProperty = 
   | 'background-color'
@@ -10,11 +12,13 @@ type CSSProperty =
   | 'font-size'
   | 'font-weight'
   | 'border-radius'
-  | 'line-height';
+  | 'line-height'
+  | 'width'
+  | 'height';
 
-type StyleObject = {
+type StyleObject = Partial<{
   [K in CSSProperty]: string;
-};
+}>;
 
 type VariantStyles = {
   [K in VariantType]: StyleObject;
@@ -83,9 +87,38 @@ export class StylesService
     }
   };
 
+  private sizeMap = {
+    xs:  { fontSize: TYPOGRAPHY_TOKENS.size.XS,    padding: SPACING_TOKENS.XS },
+    sm:  { fontSize: TYPOGRAPHY_TOKENS.size.SM,    padding: SPACING_TOKENS.SM },
+    md:  { fontSize: TYPOGRAPHY_TOKENS.size.BASE,  padding: SPACING_TOKENS.MD },
+    lg:  { fontSize: TYPOGRAPHY_TOKENS.size.LG,    padding: SPACING_TOKENS.LG },
+    xl:  { fontSize: TYPOGRAPHY_TOKENS.size.XL,    padding: SPACING_TOKENS.XL },
+    xxl: { fontSize: TYPOGRAPHY_TOKENS.size.XXL,   padding: SPACING_TOKENS.XXL },
+    xxxl:{ fontSize: TYPOGRAPHY_TOKENS.size.XXXL,  padding: SPACING_TOKENS.XXXL },
+    full:{ fontSize: TYPOGRAPHY_TOKENS.size.XXXXL, padding: SPACING_TOKENS.XXXL },
+  };
+
   getVariantStyles(variant: VariantType): StyleObject
   {
     return this.variantStyles[variant];
+  }
+
+  getLargerSize(width: SizeType, height: SizeType): SizeType {
+    const order = ['xs','sm','md','lg','xl','xxl','xxxl','full'];
+    const widthIdx = order.indexOf(width);
+    const heightIdx = order.indexOf(height);
+    return widthIdx > heightIdx ? width : height;
+  }
+
+  getSizeStyles(width: SizeType, height: SizeType): StyleObject {
+    const sizeKey = this.getLargerSize(width, height);
+    const { fontSize, padding } = this.sizeMap[sizeKey];
+    return {
+      width: WIDTHS[width.toUpperCase() as keyof typeof WIDTHS],
+      height: HEIGHTS[height.toUpperCase() as keyof typeof HEIGHTS],
+      'font-size': fontSize,
+      'padding': padding
+    };
   }
 
 }

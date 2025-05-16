@@ -2,13 +2,13 @@ export type Width = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl' | 'full';
 export type Height = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl' | 'full';
 
 export const WIDTHS = {
-  XS:    'var(--width-1)',    // 50px
-  SM:    'var(--width-2)',    // 100px
-  MD:    'var(--width-3)',    // 150px
-  LG:    'var(--width-4)',    // 200px
-  XL:    'var(--width-5)',    // 250px
-  XXL:   'var(--width-6)',    // 300px
-  XXXL:  'var(--width-7)',    // 400px
+  XS:    'var(--width-1)',    // 32px
+  SM:    'var(--width-2)',    // 64px
+  MD:    'var(--width-3)',    // 96px
+  LG:    'var(--width-4)',    // 160px
+  XL:    'var(--width-5)',    // 256px
+  XXL:   'var(--width-6)',    // 416px
+  XXXL:  'var(--width-7)',    // 672px
   FULL:  '100%',
 } as const;
 
@@ -19,6 +19,6 @@ export const HEIGHTS = {
   LG:    'var(--height-4)',   // 64px
   XL:    'var(--height-5)',   // 80px
   XXL:   'var(--height-6)',   // 96px
-  XXXL:  'var(--height-7)',   // 128px
+  XXXL:  'var(--height-7)',   // 112px
   FULL:  '100%',
 } as const; 

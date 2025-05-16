@@ -1,58 +1,10 @@
 <router-outlet />
 
 <div class="container">
-    <ax-box
-     [backgroundColor]="tokens.color.background.PRIMARY"
-     [color]="tokens.color.text.PRIMARY"
-     [padding]="tokens.spacing.LG"
-     [fontSize]="tokens.typography.size.LG"
-     [fontWeight]="tokens.typography.weight.SEMIBOLD"
-     [borderRadius]="tokens.radius.LG"
-     [lineHeight]="tokens.typography.lineHeight.NORMAL">Primary Box
-    </ax-box>
-    <ax-box
-     [backgroundColor]="tokens.color.background.SECONDARY"
-     [color]="tokens.color.text.SECONDARY"
-     [padding]="tokens.spacing.MD"
-     [fontSize]="tokens.typography.size.BASE"
-     [fontWeight]="tokens.typography.weight.NORMAL"
-     [borderRadius]="tokens.radius.MD"
-     [lineHeight]="tokens.typography.lineHeight.NORMAL">Secondary Box
-    </ax-box>
-    <ax-box
-     [backgroundColor]="tokens.color.background.SUCCESS"
-     [color]="tokens.color.text.SUCCESS"
-     [padding]="tokens.spacing.MD"
-     [fontSize]="tokens.typography.size.BASE"
-     [fontWeight]="tokens.typography.weight.MEDIUM"
-     [borderRadius]="tokens.radius.MD"
-     [lineHeight]="tokens.typography.lineHeight.NORMAL">Success Box
-    </ax-box>
-    <ax-box
-     [backgroundColor]="tokens.color.background.WARNING"
-     [color]="tokens.color.text.WARNING"
-     [padding]="tokens.spacing.MD"
-     [fontSize]="tokens.typography.size.BASE"
-     [fontWeight]="tokens.typography.weight.MEDIUM"
-     [borderRadius]="tokens.radius.MD"
-     [lineHeight]="tokens.typography.lineHeight.NORMAL">Warning Box
-    </ax-box>
-    <ax-box
-     [backgroundColor]="tokens.color.background.DANGER"
-     [color]="tokens.color.text.DANGER"
-     [padding]="tokens.spacing.MD"
-     [fontSize]="tokens.typography.size.BASE"
-     [fontWeight]="tokens.typography.weight.MEDIUM"
-     [borderRadius]="tokens.radius.MD"
-     [lineHeight]="tokens.typography.lineHeight.NORMAL">Danger Box
-    </ax-box>
-    <ax-box
-     [backgroundColor]="tokens.color.background.INFOMATION"
-     [color]="tokens.color.text.INFOMATION"
-     [padding]="tokens.spacing.MD"
-     [fontSize]="tokens.typography.size.BASE"
-     [fontWeight]="tokens.typography.weight.MEDIUM"
-     [borderRadius]="tokens.radius.MD"
-     [lineHeight]="tokens.typography.lineHeight.NORMAL">Information Box
-    </ax-box>
+    <ax-box variant="primary">Primary Box</ax-box>
+    <ax-box variant="secondary">Secondary Box</ax-box>
+    <ax-box variant="success">Success Box</ax-box>
+    <ax-box variant="warning">Warning Box</ax-box>
+    <ax-box variant="danger">Danger Box</ax-box>
+    <ax-box variant="information">Information Box</ax-box>
 </div>

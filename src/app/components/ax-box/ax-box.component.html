@@ -1,6 +1,5 @@
 <div
-  class="component-style"
-  [ngStyle]="getStyles()"
-  (click)="onClick($event)">
+ [class]="getClass()"
+ (click)="onClick($event)">
   <ng-content></ng-content>
 </div>

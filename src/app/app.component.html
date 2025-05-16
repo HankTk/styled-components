@@ -1,6 +1,16 @@
 <router-outlet />
 
 <div class="container">
+    <div class="theme-toggle">
+        <ax-box 
+            variant="primary" 
+            width="sm" 
+            height="md"
+            (click)="toggleTheme()">
+            {{ getCurrentTheme() === 'light' ? '🌙' : '☀️' }}
+        </ax-box>
+    </div>
+
     <ax-box variant="primary" width="lg" height="md">
      Primary
     </ax-box>

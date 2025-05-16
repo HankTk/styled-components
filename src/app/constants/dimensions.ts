@@ -1,7 +1,7 @@
 export type Width = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl' | 'full';
 export type Height = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl' | 'full';
 
-export const WIDTHS = {
+export const WIDTH_TOKENS = {
   XS:    'var(--width-1)',    // 32px
   SM:    'var(--width-2)',    // 64px
   MD:    'var(--width-3)',    // 96px
@@ -12,7 +12,7 @@ export const WIDTHS = {
   FULL:  '100%',
 } as const;
 
-export const HEIGHTS = {
+export const HEIGHT_TOKENS = {
   XS:    'var(--height-1)',   // 16px
   SM:    'var(--height-2)',   // 32px
   MD:    'var(--height-3)',   // 48px

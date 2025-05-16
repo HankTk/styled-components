@@ -1,7 +1,11 @@
 <router-outlet />
 
 <div class="container">
-    <ax-box variant="primary">Primary Box</ax-box>
+    <ax-box variant="primary"
+     [width]="WIDTH_TOKENS.MD"
+     [height]="HEIGHT_TOKENS.MD">
+     Primary Box
+    </ax-box>
     <ax-box variant="secondary">Secondary Box</ax-box>
     <ax-box variant="success">Success Box</ax-box>
     <ax-box variant="warning">Warning Box</ax-box>

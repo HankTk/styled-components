@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { TOKENS } from '../constants/colors';
+import { COLOR_TOKENS, SPACING_TOKENS, TYPOGRAPHY_TOKENS, RADIUS_TOKENS } from '../constants';
 
 export type VariantType = 'primary' | 'secondary' | 'success' | 'warning' | 'danger' | 'information';
 
@@ -11,58 +11,58 @@ export class StylesService
 
   private variantStyles = {
     primary: {
-      'background-color': TOKENS.color.background.PRIMARY,
-      'color': TOKENS.color.text.PRIMARY,
-      'padding': TOKENS.spacing.LG,
-      'font-size': TOKENS.typography.size.LG,
-      'font-weight': TOKENS.typography.weight.SEMIBOLD,
-      'border-radius': TOKENS.radius.LG,
-      'line-height': TOKENS.typography.lineHeight.NORMAL
+      'background-color': COLOR_TOKENS.background.PRIMARY,
+      'color': COLOR_TOKENS.text.PRIMARY,
+      'padding': SPACING_TOKENS.LG,
+      'font-size': TYPOGRAPHY_TOKENS.size.LG,
+      'font-weight': TYPOGRAPHY_TOKENS.weight.SEMIBOLD,
+      'border-radius': RADIUS_TOKENS.LG,
+      'line-height': TYPOGRAPHY_TOKENS.lineHeight.NORMAL
     },
     secondary: {
-      'background-color': TOKENS.color.background.SECONDARY,
-      'color': TOKENS.color.text.SECONDARY,
-      'padding': TOKENS.spacing.MD,
-      'font-size': TOKENS.typography.size.BASE,
-      'font-weight': TOKENS.typography.weight.NORMAL,
-      'border-radius': TOKENS.radius.MD,
-      'line-height': TOKENS.typography.lineHeight.NORMAL
+      'background-color': COLOR_TOKENS.background.SECONDARY,
+      'color': COLOR_TOKENS.text.SECONDARY,
+      'padding': SPACING_TOKENS.MD,
+      'font-size': TYPOGRAPHY_TOKENS.size.BASE,
+      'font-weight': TYPOGRAPHY_TOKENS.weight.NORMAL,
+      'border-radius': RADIUS_TOKENS.MD,
+      'line-height': TYPOGRAPHY_TOKENS.lineHeight.NORMAL
     },
     success: {
-      'background-color': TOKENS.color.background.SUCCESS,
-      'color': TOKENS.color.text.SUCCESS,
-      'padding': TOKENS.spacing.MD,
-      'font-size': TOKENS.typography.size.BASE,
-      'font-weight': TOKENS.typography.weight.MEDIUM,
-      'border-radius': TOKENS.radius.MD,
-      'line-height': TOKENS.typography.lineHeight.NORMAL
+      'background-color': COLOR_TOKENS.background.SUCCESS,
+      'color': COLOR_TOKENS.text.SUCCESS,
+      'padding': SPACING_TOKENS.MD,
+      'font-size': TYPOGRAPHY_TOKENS.size.BASE,
+      'font-weight': TYPOGRAPHY_TOKENS.weight.MEDIUM,
+      'border-radius': RADIUS_TOKENS.MD,
+      'line-height': TYPOGRAPHY_TOKENS.lineHeight.NORMAL
     },
     warning: {
-      'background-color': TOKENS.color.background.WARNING,
-      'color': TOKENS.color.text.WARNING,
-      'padding': TOKENS.spacing.MD,
-      'font-size': TOKENS.typography.size.BASE,
-      'font-weight': TOKENS.typography.weight.MEDIUM,
-      'border-radius': TOKENS.radius.MD,
-      'line-height': TOKENS.typography.lineHeight.NORMAL
+      'background-color': COLOR_TOKENS.background.WARNING,
+      'color': COLOR_TOKENS.text.WARNING,
+      'padding': SPACING_TOKENS.MD,
+      'font-size': TYPOGRAPHY_TOKENS.size.BASE,
+      'font-weight': TYPOGRAPHY_TOKENS.weight.MEDIUM,
+      'border-radius': RADIUS_TOKENS.MD,
+      'line-height': TYPOGRAPHY_TOKENS.lineHeight.NORMAL
     },
     danger: {
-      'background-color': TOKENS.color.background.DANGER,
-      'color': TOKENS.color.text.DANGER,
-      'padding': TOKENS.spacing.MD,
-      'font-size': TOKENS.typography.size.BASE,
-      'font-weight': TOKENS.typography.weight.MEDIUM,
-      'border-radius': TOKENS.radius.MD,
-      'line-height': TOKENS.typography.lineHeight.NORMAL
+      'background-color': COLOR_TOKENS.background.DANGER,
+      'color': COLOR_TOKENS.text.DANGER,
+      'padding': SPACING_TOKENS.MD,
+      'font-size': TYPOGRAPHY_TOKENS.size.BASE,
+      'font-weight': TYPOGRAPHY_TOKENS.weight.MEDIUM,
+      'border-radius': RADIUS_TOKENS.MD,
+      'line-height': TYPOGRAPHY_TOKENS.lineHeight.NORMAL
     },
     information: {
-      'background-color': TOKENS.color.background.INFOMATION,
-      'color': TOKENS.color.text.INFOMATION,
-      'padding': TOKENS.spacing.MD,
-      'font-size': TOKENS.typography.size.BASE,
-      'font-weight': TOKENS.typography.weight.MEDIUM,
-      'border-radius': TOKENS.radius.MD,
-      'line-height': TOKENS.typography.lineHeight.NORMAL
+      'background-color': COLOR_TOKENS.background.INFOMATION,
+      'color': COLOR_TOKENS.text.INFOMATION,
+      'padding': SPACING_TOKENS.MD,
+      'font-size': TYPOGRAPHY_TOKENS.size.BASE,
+      'font-weight': TYPOGRAPHY_TOKENS.weight.MEDIUM,
+      'border-radius': RADIUS_TOKENS.MD,
+      'line-height': TYPOGRAPHY_TOKENS.lineHeight.NORMAL
     }
   };
 

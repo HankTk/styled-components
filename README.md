@@ -1,6 +1,6 @@
 # StyledComponents
 
-A modern Angular application demonstrating the use of styled components and best practices in Angular development.
+A modern Angular application demonstrating the use of styled components and best practices in Angular development. This project showcases a comprehensive token-based design system that ensures consistent styling across components while maintaining type safety and reusability.
 
 ## Technology Stack
 

@@ -1,7 +1,7 @@
 import { Component, Input, inject } from '@angular/core';
 import { NgStyle } from '@angular/common';
 import { StylesService, VariantType } from '../../services/styles.service';
-import { WIDTH_TOKENS, HEIGHT_TOKENS } from '../../constants/dimensions';
+import { WIDTHS, HEIGHTS, Width, Height } from '../../constants/dimensions';
 
 @Component({
   selector: 'ax-box',
@@ -14,8 +14,8 @@ export class AxBoxComponent
 {
 
   @Input() variant: VariantType = 'primary';
-  @Input() width: string = WIDTH_TOKENS.MD;
-  @Input() height: string = HEIGHT_TOKENS.MD;
+  @Input() width: Width = 'md';
+  @Input() height: Height = 'md';
 
   private stylesService = inject(StylesService);
 
@@ -23,8 +23,8 @@ export class AxBoxComponent
   {
     return {
       ...this.stylesService.getVariantStyles(this.variant),
-      width: this.width,
-      height: this.height
+      width: WIDTHS[this.width],
+      height: HEIGHTS[this.height]
     };
   }
 

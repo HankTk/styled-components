@@ -7,6 +7,7 @@ A modern Angular application demonstrating the use of styled components and best
 - Angular 19.2.0
 - TypeScript 5.7.2
 - RxJS 7.8.0
+- Zone.js 0.15.0
 - Karma & Jasmine for testing
 
 ## Prerequisites
@@ -31,7 +32,7 @@ npm install
 
 3. Start the development server:
 ```bash
-ng serve
+npm start
 ```
 
 Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
@@ -41,11 +42,27 @@ Navigate to `http://localhost:4200/`. The application will automatically reload 
 ```
 styled-components/
 ├── src/                    # Source files
-├── public/                 # Public assets
-├── .angular/              # Angular build files
-├── node_modules/          # Dependencies
+│   ├── app/               # Application components
+│   ├── assets/            # Static assets
+│   ├── environments/      # Environment configurations
+│   └── styles/           # Global styles and tokens
+├── public/                # Public assets
+├── .angular/             # Angular build files
+├── .vscode/              # VS Code configuration
+├── node_modules/         # Dependencies
 └── ...config files
 ```
+
+## Development Environment
+
+### VS Code Setup
+The project includes VS Code configuration for optimal development experience:
+- Editor settings for consistent code formatting
+- Recommended extensions for Angular development
+- Debug configurations
+
+### Editor Configuration
+The project uses `.editorconfig` to maintain consistent coding styles across different editors and IDEs.
 
 ## Style Token System
 
@@ -82,14 +99,14 @@ graph TD
     F --> J[SUCCESS]
     F --> K[WARNING]
     F --> L[DANGER]
-    F --> M[INFOMATION]
+    F --> M[INFORMATION]
 
     G --> N[PRIMARY]
     G --> O[SECONDARY]
     G --> P[SUCCESS]
     G --> Q[WARNING]
     G --> R[DANGER]
-    G --> S[INFOMATION]
+    G --> S[INFORMATION]
 
     C --> T[XS]
     C --> U[SM]
@@ -150,7 +167,7 @@ TOKENS.color.background.SECONDARY  // Secondary background color
 TOKENS.color.background.SUCCESS    // Success state color
 TOKENS.color.background.WARNING    // Warning state color
 TOKENS.color.background.DANGER     // Danger state color
-TOKENS.color.background.INFOMATION // Information state color
+TOKENS.color.background.INFORMATION // Information state color
 ```
 
 #### Spacing Tokens
@@ -259,8 +276,9 @@ export class AxBoxComponent {
 
 - `npm start` - Starts the development server
 - `npm run build` - Builds the project for production
-- `npm run test` - Runs unit tests
-- `npm run e2e` - Runs end-to-end tests
+- `npm run watch` - Builds the project and watches for changes
+- `npm test` - Runs unit tests
+- `ng generate` - Generates new components, services, etc.
 
 ## Development
 
@@ -299,6 +317,7 @@ The build artifacts will be stored in the `dist/` directory.
 - [Angular CLI Overview](https://angular.dev/tools/cli)
 - [TypeScript Documentation](https://www.typescriptlang.org/docs/)
 - [RxJS Documentation](https://rxjs.dev/)
+- [VS Code Angular Extension](https://marketplace.visualstudio.com/items?itemName=Angular.ng-template)
 
 ## Contributing
 

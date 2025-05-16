@@ -3,13 +3,30 @@ import { COLOR_TOKENS, SPACING_TOKENS, TYPOGRAPHY_TOKENS, RADIUS_TOKENS } from '
 
 export type VariantType = 'primary' | 'secondary' | 'success' | 'warning' | 'danger' | 'information';
 
+type CSSProperty = 
+  | 'background-color'
+  | 'color'
+  | 'padding'
+  | 'font-size'
+  | 'font-weight'
+  | 'border-radius'
+  | 'line-height';
+
+type StyleObject = {
+  [K in CSSProperty]: string;
+};
+
+type VariantStyles = {
+  [K in VariantType]: StyleObject;
+};
+
 @Injectable({
   providedIn: 'root'
 })
 export class StylesService
 {
 
-  private variantStyles = {
+  private variantStyles: VariantStyles = {
     primary: {
       'background-color': COLOR_TOKENS.background.PRIMARY,
       'color': COLOR_TOKENS.text.PRIMARY,
@@ -56,8 +73,8 @@ export class StylesService
       'line-height': TYPOGRAPHY_TOKENS.lineHeight.NORMAL
     },
     information: {
-      'background-color': COLOR_TOKENS.background.INFOMATION,
-      'color': COLOR_TOKENS.text.INFOMATION,
+      'background-color': COLOR_TOKENS.background.INFORMATION,
+      'color': COLOR_TOKENS.text.INFORMATION,
       'padding': SPACING_TOKENS.MD,
       'font-size': TYPOGRAPHY_TOKENS.size.BASE,
       'font-weight': TYPOGRAPHY_TOKENS.weight.MEDIUM,
@@ -66,7 +83,7 @@ export class StylesService
     }
   };
 
-  getVariantStyles(variant: VariantType)
+  getVariantStyles(variant: VariantType): StyleObject
   {
     return this.variantStyles[variant];
   }

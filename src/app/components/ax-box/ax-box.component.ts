@@ -1,5 +1,5 @@
 import { Component, Input, inject } from '@angular/core';
-import { NgStyle } from '@angular/common';
+import { NgStyle, CommonModule } from '@angular/common';
 import { StylesService, VariantType } from '../../services/styles.service';
 import { WIDTHS, HEIGHTS, Width, Height } from '../../constants/dimensions';
 import { SPACING_TOKENS } from '../../constants/spacing';
@@ -9,7 +9,7 @@ import { TYPOGRAPHY_TOKENS } from '../../constants/typography';
   selector: 'ax-box',
   templateUrl: './ax-box.component.html',
   styleUrls: ['./ax-box.component.scss'],
-  imports: [NgStyle],
+  imports: [CommonModule],
   standalone: true
 })
 export class AxBoxComponent
@@ -52,6 +52,10 @@ export class AxBoxComponent
       'font-size': fontSize,
       'padding': padding
     };
+  }
+
+  onClick(event: MouseEvent): void {
+    console.log('Button clicked!');
   }
 
 }
